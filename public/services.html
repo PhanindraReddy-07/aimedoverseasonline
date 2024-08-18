@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aimed Overseas Consultancy offers expert guidance and support for students and professionals seeking opportunities abroad. Located in [Your Location], we provide personalized consulting services for higher education, visa applications, and more.">
+    <meta name="keywords" content="overseas consultancy, study abroad, visa assistance, Aimed Overseas Consultancy, education consulting, international opportunities">
+    <meta name="author" content="Aimed Overseas Consultancy">
+    <title>aimEd Overseas</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="1.png" type="image/x-icon">
+    <style>
+        #services-section {
+            background-color: #f9f9f9;
+        }
+        #services-section h2 {
+            color: #333;
+        }
+        #service-items .service-item {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>   
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html"><img src="svg trans.svg"></a>
+            <button class="pl-2 text-black block md:hidden focus:outline-none" id="buttonUl" onclick="openUl()">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+            <i class="bx bx-x" style="color: rgb(0, 0, 0); font-size:24px;" onclick="closeUl()" id="close"></i>
+            <ul class=" md:flex space-x-0x" id="ul">
+                <li><a href="index.html" class="text-black" id="li-1">Home</a></li>
+                <li><a href="services.html" class="text-black" id="li-2">Services</a></li>
+                <li><a href="aboutus.html" class="text-black" id="li-3">About Us</a></li>
+                <li><a href="contact.html" class="text-black" id="li-4">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+<!-- Services Section -->
+<section id="services-section" class="py-16">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-8">Our Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="service-items">
+            <div class="service-item bg-white p-6 rounded shadow">
+                <h3 class="text-2xl font-bold mt-4"><i class="bx bxs-school"></i>University Selection</h3>
+                <p class="text-gray-700 mt-2">Our consultants help you select the best universities based on your academic and career goals, ensuring a perfect match for your needs.</p>
+            </div>
+            <div class="service-item bg-white p-6 rounded shadow">
+                <h3 class="text-2xl font-bold mt-4"><i class="bx bx-file"></i>Application Assistance</h3>
+                <p class="text-gray-700 mt-2">From preparing documents to submitting applications, we offer comprehensive support to make the application process smooth and stress-free.</p>
+            </div>
+            <div class="service-item bg-white p-6 rounded shadow">
+                <h3 class="text-2xl font-bold mt-4"><i class="bx bx-trophy"></i>Scholarship Guidance</h3>
+                <p class="text-gray-700 mt-2">We help you find and apply for scholarships to reduce the financial burden of studying abroad, making education more accessible.</p>
+            </div>
+            <div class="service-item bg-white p-6 rounded shadow">
+                <h3 class="text-2xl font-bold mt-4"><i class="bx bxs-plane-alt"></i>Visa Counseling</h3>
+                <p class="text-gray-700 mt-2">We provide expert guidance on the visa application process, ensuring that you meet all requirements and increase your chances of approval.</p>
+            </div>
+            <div class="service-item bg-white p-6 rounded shadow">
+                <h3 class="text-2xl font-bold mt-4"><i class="bx bxs-plane-alt"></i>Pre-departure Briefing</h3>
+                <p class="text-gray-700 mt-2">Before you embark on your journey, we provide essential information and advice to help you prepare for life in a new country.</p>
+            </div>
+            <div class="service-item bg-white p-6 rounded shadow">
+                <h3 class="text-2xl font-bold mt-4"><i class="bx bx-hotel"></i>Accommodation Assistance</h3>
+                <p class="text-gray-700 mt-2">We assist you in finding suitable accommodation options, ensuring you have a comfortable and secure place to stay while studying abroad.</p>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Newsletter Signup Section -->
+    <section class="newsletter">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-2xl font-bold mb-4">Stay Updated</h3>
+            <p class="text-gray-700 mb-4">Subscribe to our newsletter for the latest updates, tips, and information about studying abroad.</p>
+            <form class="mb-10 flex flex-col md:flex-row justify-center">
+                <input type="email" name="email" placeholder="Enter your email" class="" required>
+                <button class="p-2 ml-3 rounded shadow" type="submit">Subscribe</button>
+                <div id="responsemessage"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="p-4 text-center text-white">
+        <div class="footer-links">
+            <div class="footer-links1"> 
+                <h3 class="text-lg font-bold mb-2">Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links2">
+                <h3 class="text-lg font-bold mb-2">About AimEd Abroad Services</h3>
+                <p class="text-sm">Information about the consultancy. Provide details about your services, mission, and vision.</p>
+                <div class="footer-info">
+                    <p>Address: Andhra Pradesh, India</p>
+                    <p>Email: aimedoverseasonline@gmail.com</p>
+                    <p>Phone: +91 7995574698</p>
+                </div>
+            </div>
+            <div class="footer-links1">
+                <h3 class="text-lg font-bold mb-2">Social Links</h3>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/aim.ed_overseas?igsh=bjQ5a2hzNDdkY2d2&utm_source=qr" target="_blank"><i class="bx bxl-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-links3">
+            <h3 class="text-lg font-bold mb-2">About AimEd Abroad Services</h3>
+            <p class="text-sm">Information about the consultancy. Provide details about your services, mission, and vision.</p>
+            <div class="footer-info">
+                <p>Address: 123 Street, City, Country</p>
+                <p>Email: info@example.com</p>
+                <p>Phone: +91 7995574698</p>
+            </div>
+        </div>
+       
+        <div id="copyright">
+            <p>&copy; 2024 Overseas Consultancy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Icon -->
+    <a href="https://wa.me/917995574698" class="whatsapp-icon" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+    <script>
+
+        function openUl() {
+            const ul = document.getElementById('ul');
+            ul.classList.remove('slide-out');
+            ul.classList.add('slide-in');
+            ul.style.display = 'block';
+            document.getElementById('buttonUl').style.display = 'none';
+            document.getElementById('close').style.display = 'block';
+        }
+        
+        function closeUl() {
+            const ul = document.getElementById('ul');
+            ul.classList.remove('slide-in');
+            ul.classList.add('slide-out');
+            setTimeout(() => {
+                ul.style.display = 'none';
+            }, 200); 
+            document.getElementById('buttonUl').style.display = 'block';
+            document.getElementById('close').style.display = 'none';
+        }
+        document.querySelector('form').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            
+            const email = document.querySelector('input[name="email"]').value;
+            const responseMessage = document.querySelector('#responsemessage');
+            
+            try {
+                const response = await fetch('/subscribe', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ email }),
+                });
+        
+                const result = await response.json();
+                
+                if (response.ok) {
+                    responseMessage.textContent = 'Subscription successful!';
+                    responseMessage.style.color = 'green';
+                } else {
+                    responseMessage.textContent = result.error || 'An error occurred.';
+                    responseMessage.style.color = 'red';
+                }
+            } catch (error) {
+                responseMessage.textContent = 'An error occurred.';
+                responseMessage.style.color = 'red';
+            }
+        });
+        
+    </script>
+</body>
+</html>    

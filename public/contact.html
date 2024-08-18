@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aimed Overseas Consultancy offers expert guidance and support for students and professionals seeking opportunities abroad. Located in [Your Location], we provide personalized consulting services for higher education, visa applications, and more.">
+    <meta name="keywords" content="overseas consultancy, study abroad, visa assistance, Aimed Overseas Consultancy, education consulting, international opportunities">
+    <meta name="author" content="Aimed Overseas Consultancy">
+    <title>aimEd Overseas</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="1.png" type="image/x-icon">
+</head>   
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html"><img src="svg trans.svg"></a>
+            <button class="pl-2 text-black block md:hidden focus:outline-none" id="buttonUl" onclick="openUl()">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+            <i class="bx bx-x" style="color: rgb(0, 0, 0); font-size:24px;" onclick="closeUl()" id="close"></i>
+            <ul class=" md:flex space-x-0x" id="ul">
+                <li><a href="index.html" class="text-black" id="li-1">Home</a></li>
+                <li><a href="services.html" class="text-black" id="li-2">Services</a></li>
+                <li><a href="aboutus.html" class="text-black" id="li-3">About Us</a></li>
+                <li><a href="contact.html" class="text-black" id="li-4">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+            <!-- Contact Section -->
+    <section class="bg-grey text-black py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Contact Us</h2>
+            <div class="flex flex-col md:flex-row gap-5">
+                <!-- Contact Information -->
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-4">Our Location</h3>
+                    <p class="text-lg mb-4">Andhra Pradesh, India</p>
+                    <p class="text-lg mb-4">Phone: +91 7995574698</p>
+                    <p class="text-lg mb-4">Email: aimedoverseasonline@gmail.com</p>
+                    <p class="text-lg mb-4"><b>Founder :</b>BALA MURALI BOMMU</p>                    
+                </div>
+
+                <!-- Contact Form -->
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold mb-4 text-black">Get In Touch</h3>
+                    <form id="contactForm" class="space-y-4">
+                        <div>
+                            <label for="name" class="text-black">Full Name:</label>
+                            <input type="text" id="name" name="name" class="w-full p-2 rounded bg-gray-200" required>
+                        </div>
+                        <div>
+                            <label for="email" class="text-black">Email:</label>
+                            <input type="email" id="email" name="email" class="w-full p-2 rounded bg-gray-200" required>
+                        </div>
+                        <div>
+                            <label for="phone" class="text-black">Phone:</label>
+                            <input type="tel" id="phone" name="phone" class="w-full p-2 rounded bg-gray-200" required>
+                        </div>
+                        <div>
+                            <label for="message" class="text-black">Message:</label>
+                            <textarea id="message" name="message" rows="4" class="w-full p-2 rounded bg-gray-200" required></textarea>
+                        </div>
+                        <button type="submit" class="bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Send Message</button>
+                    </form>
+                    <div id="responseMessage" class="mt-4 text-center text-lg"></div>                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="p-4 text-center text-white">
+        <div class="footer-links">
+            <div class="footer-links1"> 
+                <h3 class="text-lg font-bold mb-2">Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links2">
+                <h3 class="text-lg font-bold mb-2">About AimEd Abroad Services</h3>
+                <p class="text-sm">Information about the consultancy. Provide details about your services, mission, and vision.</p>
+                <div class="footer-info">
+                    <p>Address: Andhra Pradesh, India</p>
+                    <p>Email: aimedoverseasonline@gmail.com</p>
+                    <p>Phone: +91 7995574698</p>
+                </div>
+            </div>
+            <div class="footer-links1">
+                <h3 class="text-lg font-bold mb-2">Social Links</h3>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/aim.ed_overseas?igsh=bjQ5a2hzNDdkY2d2&utm_source=qr" target="_blank"><i class="bx bxl-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-links3">
+            <h3 class="text-lg font-bold mb-2">About AimEd Abroad Services</h3>
+            <p class="text-sm">Information about the consultancy. Provide details about your services, mission, and vision.</p>
+            <div class="footer-info">
+                <p>Address: 123 Street, City, Country</p>
+                <p>Email: info@example.com</p>
+                <p>Phone: +91 7995574698</p>
+            </div>
+        </div>
+       
+        <div id="copyright">
+            <p>&copy; 2024 Overseas Consultancy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Icon -->
+    <a href="https://wa.me/917995574698" class="whatsapp-icon" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+    <script>
+
+        function openUl() {
+            const ul = document.getElementById('ul');
+            ul.classList.remove('slide-out');
+            ul.classList.add('slide-in');
+            ul.style.display = 'block';
+            document.getElementById('buttonUl').style.display = 'none';
+            document.getElementById('close').style.display = 'block';
+        }
+        
+        function closeUl() {
+            const ul = document.getElementById('ul');
+            ul.classList.remove('slide-in');
+            ul.classList.add('slide-out');
+            setTimeout(() => {
+                ul.style.display = 'none';
+            }, 200); 
+            document.getElementById('buttonUl').style.display = 'block';
+            document.getElementById('close').style.display = 'none';
+        }
+        document.getElementById('contactForm').addEventListener('submit', async (event) => {
+            event.preventDefault();
+        
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData.entries());
+            const responseMessage = document.getElementById('responseMessage');
+        
+            try {
+                const response = await fetch('/send-message', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+        
+                const result = await response.json();
+        
+                if (response.ok) {
+                    responseMessage.textContent = result.message;
+                    responseMessage.style.color = 'green';
+                    event.target.reset(); // Clear form fields on success
+                } else {
+                    responseMessage.textContent = result.message;
+                    responseMessage.style.color = 'red';
+                }
+            } catch (error) {
+                responseMessage.textContent = 'An error occurred. Please try again.';
+                responseMessage.style.color = 'red';
+            }
+        });
+    </script>
+</body>
+</html>    

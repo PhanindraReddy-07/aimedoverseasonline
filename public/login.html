@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overseas Consultancy</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #login  input{
+            outline: none;
+            margin: 10px;
+            border: .5px solid rgba(58, 57, 57, 0.724);
+        }
+        #login h1{
+            margin-left:700px;
+        }
+        #login form{
+            margin:0px 550px;
+        }
+        #frgtpwd{
+            color: red;
+        }
+        #login-button, #signup-button{
+            background-color: rgba(0, 0, 255, 0.708);
+            margin:10px;
+            margin-left: 130px;
+            border-radius: 5px;
+            padding:7px;
+            width: 90px;
+            color: aliceblue;
+        }
+        .message {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            color: #fff;
+        }
+        @media only screen and (max-width:768px){
+            #login h1{
+                margin-left:125px;
+            }
+            #login form{
+                margin:0px 20px;
+            }
+            #login input{
+                margin-left:30px;
+            }
+            #login-button, #signup-button{
+                margin-left: 73px;
+            }
+            
+        }    
+        @media only screen and (min-width:768px){
+            #login label{
+                margin-left: 60px;
+            }
+            #login input{
+                margin-left:30px;
+            }
+        }
+    </style>
+</head>   
+    <body class="bg-gray-100">
+    
+        <!-- Navbar -->
+        <nav id="navbar">
+            <div class="container mx-auto flex justify-between items-center">
+                <a href="index.html"><img src="svg trans.svg"></a>
+                <button class="pl-2 text-white block md:hidden focus:outline-none" id="buttonUl" onclick="openUl()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+                <i class="bx bx-x" style="color: aliceblue; font-size:24px;" onclick="closeUl()" id="close"></i>
+                <ul class=" md:flex space-x-0x" id="ul">
+                    <li><a href="index.html" class="text-white" id="li-1">Home</a></li>
+                    <li><a href="services.html" class="text-white" id="li-2">Services</a></li>
+                    <li><a href="aboutus.html" class="text-white" id="li-3">About Us</a></li>
+                    <li><a href="contact.html" class="text-white" id="li-4">Contact</a></li>
+                    <li><a href="login.html" class="text-white" id="li-5">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+   <!--Login section-->
+   <section id="login" class="py-12">
+    <div class="items-center">
+        <div>
+            <h1 style="font-size:20px; font-weight: 700; margin-bottom:15px;">LOGIN</h1>
+            <form id="login-form" class="bg-white p-6 rounded shadow ml-10 mr-5" onsubmit="login(event)">
+                <label for="login-username" style="margin-left: 20px;"><strong>Username:</strong></label>
+                <input type="text" id="login-username" name="username" required><br>
+                <label for="login-password" style="margin-left: 20px;"><strong>Password:</strong></label>
+                <input type="password" id="login-password" name="password" required><br>
+                <button type="submit" id="login-button">Login</button>
+                <div id="login-message" class="message" style="display: none;"></div>
+                <div class="flex flex-col md:flex-row">
+                    <p class="pr-3" id="frgtpwd">Forgot Password?</p>
+                    <p>Don't have an account <a href="#" style="text-decoration: underline; color:rgb(6, 43, 255)">Signup<i class='bx bxs-down-arrow-alt'></i></a></p>
+                </div>
+            </form>
+        </div>
+        <div>
+            <h1 style="font-size:20px; font-weight: 700;" class="mt-5 mb-5">SIGNUP</h1>
+            <form id="signup-form" class="bg-white p-6 rounded shadow ml-10 mr-5" onsubmit="signup(event)">
+                <label for="signup-fullname" style="margin-left: 20px;"><strong>Name:</strong></label>
+                <input type="text" id="signup-fullname" name="fullname" required><br>
+                <label for="signup-email" style="margin-left: 20px;"><strong>Email:</strong></label>
+                <input type="email" id="signup-email" name="email" required><br>
+                <label for="signup-phone" style="margin-left: 20px;"><strong>Phn No.:</strong></label>
+                <input type="text" id="signup-phone" name="phone" required><br>
+                <label for="signup-username" style="margin-left: 20px;"><strong>Username:</strong></label>
+                <input type="text" id="signup-username" name="username" required><br>
+                <label for="signup-password" style="margin-left: 20px;"><strong>Password:</strong></label>
+                <input type="password" id="signup-password" name="password" required><br>
+                <button type="submit" id="signup-button">Signup</button>
+                <div id="signup-message" class="message" style="display: none;"></div>
+            </form>
+        </div>
+    </div>
+</section>
+    <!-- Footer -->
+    <footer class="p-4 text-center text-white">
+        <div class="footer-links">
+            <div class="footer-links1"> 
+                <h3 class="text-lg font-bold mb-2">Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links2">
+                <h3 class="text-lg font-bold mb-2">About AimEd Abroad Services</h3>
+                <p class="text-sm">Information about the consultancy. Provide details about your services, mission, and vision.</p>
+                <div class="footer-info">
+                    <p>Address: 123 Street, City, Country</p>
+                    <p>Email: info@example.com</p>
+                    <p>Phone: +91 7995574698</p>
+                </div>
+            </div>
+            <div class="footer-links1">
+                <h3 class="text-lg font-bold mb-2">Social Links</h3>
+                <div class="footer-social">
+                    <a href="#" target="_blank"><i class="bx bxl-facebook-square"></i></a>
+                    <a href="#" target="_blank"><i class="bx bxl-twitter"></i></a>
+                    <a href="https://www.instagram.com/aim.ed_overseas?igsh=bjQ5a2hzNDdkY2d2&utm_source=qr" target="_blank"><i class="bx bxl-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="bx bxl-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-links3">
+            <h3 class="text-lg font-bold mb-2">About AimEd Abroad Services</h3>
+            <p class="text-sm">Information about the consultancy. Provide details about your services, mission, and vision.</p>
+            <div class="footer-info">
+                <p>Address: 123 Street, City, Country</p>
+                <p>Email: info@example.com</p>
+                <p>Phone: +91 7995574698</p>
+            </div>
+        </div>
+       
+        <div id="copyright">
+            <p>&copy; 2024 Overseas Consultancy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Icon -->
+    <a href="https://wa.me/917995574698" class="whatsapp-icon" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+    <script>
+
+        function openUl() {
+            const ul = document.getElementById('ul');
+            ul.classList.remove('slide-out');
+            ul.classList.add('slide-in');
+            ul.style.display = 'block';
+            document.getElementById('buttonUl').style.display = 'none';
+            document.getElementById('close').style.display = 'block';
+        }
+        
+        function closeUl() {
+            const ul = document.getElementById('ul');
+            ul.classList.remove('slide-in');
+            ul.classList.add('slide-out');
+            setTimeout(() => {
+                ul.style.display = 'none';
+            }, 200); 
+            document.getElementById('buttonUl').style.display = 'block';
+            document.getElementById('close').style.display = 'none';
+        }
+        function login(event) {
+            event.preventDefault(); // Prevent default form submission
+        
+            const username = document.getElementById('login-username').value;
+            const password = document.getElementById('login-password').value;
+            const responseMessage = document.getElementById('login-message');
+        
+            fetch('/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ username, password })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert("Login Succesfull");
+                    window.location.href = 'index.html'; // Redirect to dashboard
+                } else {
+                    responseMessage.textContent = 'Invalid Credentials';
+                    responseMessage.style.display = 'block';
+                    responseMessage.style.color = 'red';
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                responseMessage.textContent = 'Server Error';
+                responseMessage.style.display = 'block';
+                responseMessage.style.color = 'red';
+            });
+        }
+        
+        
+        function signup(event) {
+            event.preventDefault(); // Prevent default form submission
+        
+            // Get form values
+            const fullname = document.getElementById('signup-fullname').value;
+            const email = document.getElementById('signup-email').value;
+            const phone = document.getElementById('signup-phone').value;
+            const username = document.getElementById('signup-username').value;
+            const password = document.getElementById('signup-password').value;
+            const responseMessage = document.getElementById('signup-message');
+        
+            // Send form data to server
+            fetch('/signup', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    fullname,
+                    email,
+                    phone,
+                    username,
+                    password
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    responseMessage.textContent = 'Signup Successful!';
+                    responseMessage.style.color='green';
+                } else {
+                    responseMessage.textContent = 'Failed to signup';
+                    responseMessage.style.color='red';
+                }
+                responseMessage.style.display = 'block';
+                
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                responseMessage.textContent = 'Server Error';
+                responseMessage.style.display = 'block';
+                responseMessage.style.color='red';
+            });
+        }
+        
+        </script>
+</body>
+</html>

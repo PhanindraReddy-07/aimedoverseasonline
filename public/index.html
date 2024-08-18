@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="aimed overseas consultancy offers expert guidance and support for students and professionals seeking opportunities abroad. Located in Mylavaram, we provide personalized consulting services for higher education, visa applications, and more.">
+    <meta name="keywords" content="aimed overseas,overseas consultancy, study abroad, visa assistance, Aimed Overseas Consultancy, education consulting, international opportunities">
+    <meta name="author" content="aimed overseas consultancy">
+    <title>aimEd Overseas</title>
+    <meta property="og:title" content="aimed overseas online - tutor and educator">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="aimed overseas">
+    <meta property="og:url" content="http://www.aimedoverseasonline.com/">
+    <meta property="og:description" content="aimed overseas consultancy offers expert guidance and support for students and professionals seeking opportunities abroad. Located in Mylavaram, we provide personalized consulting services for higher education, visa applications, and more.">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="meta.png" type="image/x-icon">
+    <style>
+        #imgctz div{
+            cursor: pointer;
+        }
+        #imgctz img{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            transition: transform 2s ease-in;
+        }
+        #imgctz img:hover{
+            width: 160px;
+            height: 160px;
+        }
+        #greclr{
+            background-color:orange;
+            color:white;
+        }
+        #ieltsclr{
+            background-color:purple;
+            color:white;
+        }
+        #abtus{
+            background-color: #0300b89e;
+        }
+        #login  input{
+        outline: none;
+        margin: 10px;
+        border: 1px solid black;
+        }
+        
+        @media only screen and (max-width:786px){
+            #catg div{
+                margin: 0;
+            }
+            #imgctz img{
+                width: 130px;
+                height: 130px;
+            }
+            #abtimg{
+                margin: 0;
+            }
+            #abtp{
+                display: none;
+            }
+            #welcome-section h1{
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html"><img src="svg trans.svg"></a>
+            <button class="pl-2 text-black block md:hidden focus:outline-none" id="buttonUl" onclick="openUl()">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+            <i class="bx bx-x" style="color: rgb(0, 0, 0); font-size:24px;" onclick="closeUl()" id="close"></i>
+            <ul class=" md:flex space-x-0x" id="ul">
+                <li><a href="index.html" class="text-black" id="li-1">Home</a></li>
+                <li><a href="services.html" class="text-black" id="li-2">Services</a></li>
+                <li><a href="aboutus.html" class="text-black" id="li-3">About Us</a></li>
+                <li><a href="contact.html" class="text-black" id="li-4">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Carousel -->
+    <section class="relative w-full h-screen" id="hero">
+        <div class="absolute inset-0 overflow-hidden">
+            <img src="5.png" alt="carousel image" class="h-full" id="cd1">
+        </div>
+        <div class="container mx-auto flex justify-center items-center h-full absolute inset-0" id="welcome-section">
+            <div class="text-center text-white px-4 md:px-0">
+                <h1 class="text-2xl md:text-5xl font-bold">Welcome to AimEd Abroad Services</h1>
+                <p class="text-lg md:text-xl mt-4">Your gateway to studying abroad</p>
+                <a href="https://careertest.edumilestones.com/student-profiler/?channel_id=MzE1NQ==" class="mt-5 inline-block bg-blue-600 text-white py-2 px-4 rounded shadow">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-16 bg-gray-100" id="catg">
+        <div class="container mx-auto px-5">
+            <h2 class="text-3xl font-bold text-center mb-8"><p style="font-family: Dubai;">OUR VISA CATEGORIES</p></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5" >
+                <div class="bg-white p-6 rounded shadow ml-10 mr-5" id="catg1" style="text-align: center;">
+                    <h3 class="text-2xl font-bold mb-4"><i class='bx bxs-graduation' style="font-size: 30px; margin-right:8px; color:rgba(255, 0, 0, 0.886);"></i>Student Visa</h3>
+                    <p class="text-gray-700">A student visa is an endorsement that is added to a government passport, which permits foreign students to study at a country's
+                         qualified educational institutions. Any prospective student
+                         seeking higher education in another country must obtain a student visa from that country.</p>
+                </div>
+                <div class="bg-white p-6 rounded shadow ml-5 mr-5" style="text-align: center;">
+                    <h3 class="text-2xl font-bold mb-4"><i class='bx bxs-briefcase' style="font-size: 30px; margin-right:8px; color:rgba(255, 0, 0, 0.886);"></i>Business Visa</h3>
+                    <p class="text-gray-700">Government authorities issue business visas to travelers who intend to conduct permissible business activities and attend meetings that do not constitute labor or employment in a specific country.
+                         Common activities performed on a business visa include: Attending meetings.</p>
+                </div>
+                <div class="bg-white p-6 rounded shadow mr-10 ml-5" style="text-align: center;">
+                    <h3 class="text-2xl font-bold mb-4"><i class='bx bxs-group' style="font-size: 30px; margin-right:8px; color:rgba(255, 0, 0, 0.886);"></i>JobSeeker Visa</h3>
+                    <p class="text-gray-700">The job seeker visa is a temporary residence permit, which is valid for maximum 18 months and cannot be prolonged.
+                         During these 18 months, you need to find an appropriate job and switch to a job visa (also known as the residence permit for the occupation).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8"><p style="font-family: Dubai;"><a href="index.html" style="font-family: 'Times New Roman', Times, serif;">aimEd</a> EXPLORES!</p></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5" style="cursor:pointer;">
+                <div class="bg p-6 rounded shadow" id="greclr">
+                    <h3 class="text-2xl font-bold mb-4" style="color: aliceblue;">GRE TRAINING</h3>
+                </div>
+                <div class="bg-blue-500 p-6 rounded shadow">
+                    <h3 class="text-2xl font-bold mb-4" style="color: aliceblue;">TOEFL TRAINING</h3>
+                </div>
+                <div class="bg-green-600 p-6 rounded shadow" id="gmatclr">
+                    <h3 class="text-2xl font-bold mb-4" style="color: rgb(0, 0, 0);">GMAT TRAINING</h3>
+                </div>
+                <div class="bg-red-600 p-6 rounded shadow">
+                    <h3 class="text-2xl font-bold mb-4" style="color: aliceblue;">DUOLINGO TRAINING</h3>
+                </div>
+                <div class="p-6 rounded shadow" id="ieltsclr">
+                    <h3 class="text-2xl font-bold mb-4" style="color: aliceblue;">IELTS TRAINING</h3>
+                </div>
+                <div class="bg-yellow-600 p-6 rounded shadow">
+                    <h3 class="text-2xl font-bold mb-4" style="color: aliceblue;">VISA</h3>  
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- About Us Section -->
+<section class="py-10" id="abtus">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl text-white font-bold text-center mb-8">ABOUT US</h2>
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 md:pl-8 mt-8 md:mt-0">
+                <p class="text-white" style="font-family: Dubai; font-size:20px;">AimEd is an innovative, progressive, successful, and professionally managed company focused on one of the core sectors of the economy – Overseas Education. 
+                    AimEd is owned and managed by professionals with proven credentials in the industry. AimEd is an undisputed company and a leader in terms of quality, innovative products, and services.
+                    AimEd acts as an internationally recognized support system for 21st-century education for bridging the education divide.<p class="text-white" style="font-family: Dubai; font-size:20px;" id="abtp">
+                    AimEd recognizes that the Bachelor’s/Master’s programs by various foreign universities/colleges, professional development programs, and academic partnerships between foreign universities/colleges and Indian institutions are extremely useful in meeting the rapidly growing Indian educational needs.
+                    These programs contribute to the goal of preparing students to compete in the global economy. AimEd is working closely with more than 250 universities in the USA, UK, Australia, New Zealand, Canada, Singapore, France, and Germany to meet the ever-growing demand for overseas education.</p><a href="aboutus.html" style="text-decoration: underline; color:rgb(0, 0, 0);">read more..</a></p>
+            </div>
+            <div class="md:w-1/2 ml-40" id="abtimg">
+                <img src="svg trans.svg" alt="About Us" class="rounded shadow">
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Immigration & Citizenship Section -->
+    <section class="py-16 bg-gray-100" id="imgctz">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-2"><p style="font-family: Dubai;">Our Best Immigration <i class='bx bxs-plane-take-off' style="font-size: 35px;"></i></p></h2>
+            <p class="text-gray-600 text-center mb-8" >Choose your country</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-2" id="gridcells">
+                <div class="text-center">
+                    <img src="usa.png" alt="USA" class="mx-auto">
+                    <h3 class="text-xl font-bold mt-4">USA</h3>
+                    </a>
+                </div>
+                <div class="text-center">
+                    <img src="uk.png" alt="UK" class="mx-auto">
+                    <h3 class="text-xl font-bold mt-4">UK</h3>
+                    </a>
+                </div>
+                <div class="text-center">
+                    <img src="canada.png" alt="Canada" class="mx-auto">
+                    <h3 class="text-xl font-bold mt-4">Canada</h3>
+                    </a>
+                </div>
+                <div class="text-center">
+                    <img src="australia.png" alt="Australia" class="mx-auto">
+                    <h3 class="text-xl font-bold mt-4">Australia</h3>
+                    </a>
+                </div>
+                <div class="text-center">
+                    <img src="poland.png" alt="New Zealand" class="mx-auto">
+                    <h3 class="text-xl font-bold mt-4">Poland</h3>
+                    </a>
+                </div>
+                <div class="text-center">
+                    <img src="ireland.png" alt="Singapore" class="mx-auto">
+                    <h3 class="text-xl font-bold mt-4">Ireland</h3>
+                    </a>
+                </div>
+                <div class="text-center">
+                    <img src="france.png" alt="France" class="mx-auto">
+                    <h3 class="text-xl font-bold mt-4">France</h3>
+                    </a>
+                </div>
+                <div class="text-center">
+                    <img src="germany.png" alt="Germany" class="mx-auto">
+                    <h3 class="text-xl font-bold mt-4">Germany</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Q&A Section -->
+  <!--  <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Quick Q&A</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <div class="bg-white p-6 rounded shadow mb-4">
+                        <h3 class="text-xl font-bold mb-2">What is the process for applying for a student visa?</h3>
+                        <p class="text-gray-700">The process involves gathering the necessary documents, submitting an application, and attending an interview.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded shadow mb-4">
+                        <h3 class="text-xl font-bold mb-2">How long does it take to process a visa?</h3>
+                        <p class="text-gray-700">Processing times vary by country and visa type, but it typically takes a few weeks.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded shadow mb-4">
+                        <h3 class="text-xl font-bold mb-2">What are the requirements for a work visa?</h3>
+                        <p class="text-gray-700">Requirements usually include a job offer, proof of qualifications, and a valid passport.</p>
+                    </div>
+                </div>
+                <form class="bg-white p-6 rounded shadow" onsubmit="sendMessage(event)">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700">Name</label>
+                        <input type="text" id="name" class="w-full border border-gray-300 p-2 rounded" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700">Email</label>
+                        <input type="email" id="email" class="w-full border border-gray-300 p-2 rounded" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="question" class="block text-gray-700">Question</label>
+                        <textarea id="question" class="w-full border border-gray-300 p-2 rounded" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded">Send Question</button>
+                </form>
+            </div>
+        </div>
+    </section>
+-->
+    
+    <!-- Footer -->
+    <footer class="p-4 text-center text-white">
+        <div class="footer-links">
+            <div class="footer-links1"> 
+                <h3 class="text-lg font-bold mb-2">Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links2">
+                <h3 class="text-lg font-bold mb-2">About AimEd Abroad Services</h3>
+                <p class="text-sm">Information about the consultancy. Provide details about your services, mission, and vision.</p>
+                <div class="footer-info">
+                    <p>Address: Andhra Pradesh, India</p>
+                    <p>Email: aimedoverseasonline@gmail.com</p>
+                    <p>Phone: +91 7995574698</p>
+                </div>
+            </div>
+            <div class="footer-links1">
+                <h3 class="text-lg font-bold mb-2">Social Links</h3>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/aim.ed_overseas?igsh=bjQ5a2hzNDdkY2d2&utm_source=qr" target="_blank"><i class="bx bxl-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-links3">
+            <h3 class="text-lg font-bold mb-2">About AimEd Abroad Services</h3>
+            <p class="text-sm">Information about the consultancy. Provide details about your services, mission, and vision.</p>
+            <div class="footer-info">
+                <p>Address: 123 Street, City, Country</p>
+                <p>Email: info@example.com</p>
+                <p>Phone: +91 7995574698</p>
+            </div>
+        </div>
+       
+        <div id="copyright">
+            <p>&copy; 2024 Overseas Consultancy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Icon -->
+    <a href="https://wa.me/917995574698" class="whatsapp-icon" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+    <script>
+        function updateImageSrc() {
+            const image1 = document.getElementById('cd1');
+            const width = window.innerWidth;
+        
+            if (width <= 320) {
+                image1.src = 'mobile.png';
+            } else if (width > 320 && width <= 425) {
+                image1.src = 'mobileM.png';
+            } else if (width > 425 && width <= 768) {
+                image1.src = 'tab.png';
+            } else if (width > 768 && width <= 1024) {
+                image1.src = 'laptop.png';
+            } else if (width > 1024 && width <= 1440) {
+                image1.src = 'laptopL.png';
+            } else if (width > 1440 && width <= 2560) {
+                image1.src = 'desk.png';
+            } else {
+                image1.src = '5.png';
+            }
+        }
+        
+        // Initial check
+        updateImageSrc();
+        
+        // Check on window resize
+        window.addEventListener('resize', updateImageSrc);
+        
+        
+        function openUl() {
+            const ul = document.getElementById('ul');
+            ul.classList.remove('slide-out');
+            ul.classList.add('slide-in');
+            ul.style.display = 'block';
+            document.getElementById('buttonUl').style.display = 'none';
+            document.getElementById('close').style.display = 'block';
+        }
+        
+        function closeUl() {
+            const ul = document.getElementById('ul');
+            ul.classList.remove('slide-in');
+            ul.classList.add('slide-out');
+            setTimeout(() => {
+                ul.style.display = 'none';
+            }, 200); 
+            document.getElementById('buttonUl').style.display = 'block';
+            document.getElementById('close').style.display = 'none';
+        }
+        
+        function openUl() {
+            const ul = document.getElementById('ul');
+            ul.classList.remove('slide-out');
+            ul.classList.add('slide-in');
+            ul.style.display = 'block';
+            document.getElementById('buttonUl').style.display = 'none';
+            document.getElementById('close').style.display = 'block';
+        }
+
+        // Carousel functionality
+        let currentIndex = 0;
+        const items = document.querySelectorAll('.carousel-item');
+        const totalItems = items.length;
+
+        function showItem(index) {
+            const newIndex = index % totalItems;
+            document.querySelector('.carousel-inner').style.transform = `translateX(-${newIndex * 100}%)`;
+            currentIndex = newIndex;
+        }
+
+        function autoScroll() {
+            showItem(currentIndex + 1);
+        }
+        setInterval(autoScroll, 4000);
+
+        async function sendMessage(event) {
+            event.preventDefault();
+        
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('question').value;
+        
+            try {
+                const response = await fetch('/api/send-email', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ name, email, message })
+                });
+        
+                if (response.ok) {
+                    alert('Message sent successfully!');
+                } else {
+                    alert('Failed to send message.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again.');
+            }
+        }
+    </script>
+</body>
+</html>

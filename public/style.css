@@ -1,0 +1,170 @@
+
+body{
+            overflow-x: hidden;
+        }
+        #navbar{
+            background-color: #ffffff9e;
+            padding: 4px 4px 0px 4px;
+            
+        }
+        #navbar i{
+            display: none;
+        }
+        #navbar a, button{
+            animation: fadeIn .7s ease-in-out;
+        }
+        #navbar img{
+            margin: 0;
+            padding: 0;
+            width: 180px;
+            height: 140px;
+        }
+        .carousel {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease;
+            width: 300%;
+        }
+        .carousel-item {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+        .carousel-item img {
+            width: 34%;
+            height: 100vh;
+        }
+        #ul li{
+            text-decoration: none;
+            color:rgb(2, 35, 63);
+            animation: fadeIn 2s;
+            font-size: 1.1em;
+            font-family: Dubai;
+            padding-right: 30px;
+            position: relative;
+        }
+        @media only screen and (max-width: 768px){
+            #ul {
+                display: none;
+                padding-right: 5px;
+                width: 38%;
+                animation-duration: 0.5s;
+            }
+            #ul.slide-in {
+                display: block;
+                animation-name: slideIn .5s ease-in;
+            } 
+            #ul.slide-out {
+                display: block;
+                animation-name: slideOut .5s ease-in;
+            }
+            .carousel-item img {
+                width: 34%;
+                height: 65vh;
+                opacity: 80%;
+            }
+            #welcome-section{
+                height: 65vh;
+            }
+            #hero{
+                height: 65vh;
+            }
+            footer{
+                display: block;
+            }
+            .footer-links{
+                display: block;
+            }
+            .footer-links1{
+                width: 200px;
+            }
+            .footer-links2{
+                display: none;
+            }
+            .footer-links3{
+                display: block;
+            }
+            #copyright{
+                display: block;
+                font-size: 13.1px;
+            }
+        }
+        .whatsapp-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #25D366;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        .whatsapp-icon img {
+            width: 30px;
+            height: 30px;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            color: white;
+        }
+        .footer-links ul li:hover {
+            color: #212e3c;
+        }
+        footer{
+            background-color: #0300b89e;
+        }
+        .footer-info {
+            padding: 20px;
+            color: white;
+        }
+        .footer-social {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px;
+        }
+        .footer-social a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            padding-left: 3px;
+            font-size:25px;
+        }
+        .footer-social a:hover {
+            color: #212e3c;
+        }
+        .footer-links3{
+            display: none;
+        }
+        @keyframes slideOut {
+            from {
+                transform: translateX(-80%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+        @keyframes fadeIn{
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 100;
+            }
+        }

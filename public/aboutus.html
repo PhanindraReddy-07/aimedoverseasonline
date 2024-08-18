@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aimed Overseas Consultancy offers expert guidance and support for students and professionals seeking opportunities abroad. Located in [Your Location], we provide personalized consulting services for higher education, visa applications, and more.">
+    <meta name="keywords" content="overseas consultancy, study abroad, visa assistance, Aimed Overseas Consultancy, education consulting, international opportunities">
+    <meta name="author" content="Aimed Overseas Consultancy">
+    <title>aimEd Overseas</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="1.png" type="image/x-icon">
+    <style>
+        .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #1f2937;
+        }
+        .testimonial {
+            border-left: 4px solid #1f2937;
+            padding-left: 1rem;
+            margin-top: 1rem;
+            background: #f3f4f6;
+            border-radius: 0.5rem;
+        }
+        .faq-item {
+            margin-bottom: 1rem;
+        }
+        .faq-question {
+            font-weight: 600;
+        }
+        .faq-answer {
+            padding-left: 1rem;
+        }
+    </style>
+</head>   
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html"><img src="svg trans.svg"></a>
+            <button class="pl-2 text-black block md:hidden focus:outline-none" id="buttonUl" onclick="openUl()">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+            <i class="bx bx-x" style="color: rgb(0, 0, 0); font-size:24px;" onclick="closeUl()" id="close"></i>
+            <ul class=" md:flex space-x-0x" id="ul">
+                <li><a href="index.html" class="text-black" id="li-1">Home</a></li>
+                <li><a href="services.html" class="text-black" id="li-2">Services</a></li>
+                <li><a href="aboutus.html" class="text-black" id="li-3">About Us</a></li>
+                <li><a href="contact.html" class="text-black" id="li-4">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- About Us Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-center mb-8">Welcome to Aim Ed Overseas!</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2" id="aboutusimage">
+                    <img src="maping logo.svg" height="500px" width="500px" alt="About Us" id="abtimg2" class="rounded shadow">
+                </div>
+                <div class="md:w-1/2 mt-6 md:mt-0" id="about">
+                    <p class="mt-4 text-lg text-gray-700">At Aim Ed Overseas, our mission is simple: "We Aim For Your Education" We are dedicated to guiding and supporting students on their journey to achieve their dreams of studying abroad. Our comprehensive services are designed to simplify and streamline the entire process, making it as smooth and stress-free as possible.<br></p>
+                    <p class="mt-5 text-gray-700" style="font-size:30px; font-weight:600;">Our Services Include:</p>
+                    <p class="mt-4 text-lg text-gray-700"><strong>University Selection:</strong> We help you choose the best universities and programs that align with your academic and career goals.<br>
+                        <strong>Application Assistance:</strong> From filling out application forms to writing personal statements, we provide expert guidance to ensure your applications stand out.<br>
+                        <strong> Visa and Immigration Support:</strong> Our experienced team assists with all aspects of visa applications and immigration procedures, ensuring you meet all requirements and deadlines.<br>
+                        <strong> Pre-Departure Guidance:</strong> We offer valuable advice and resources to prepare you for life in a new country, including cultural tips, accommodation options, and more.<br>
+                        <strong>Ongoing Support: </strong>Our commitment to you doesn’t end once you’ve arrived at your destination. We continue to provide support and assistance throughout your studies abroad.<br>
+                        With years of experience and a deep understanding of the international education landscape, Aim Ed Overseas is your trusted partner in making your educational aspirations a reality. Our personalized approach ensures that each student receives the attention and tailored solutions they need to succeed.<br></p>
+                    </p>                        
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Benefits Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-center mb-8">Why Choose Us?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold text-gray-800">Expert Guidance</h3>
+                    <p class="text-gray-600 mt-4">Our team of experienced consultants provides personalized guidance to help you make informed decisions about your educational future.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold text-gray-800">Wide Network</h3>
+                    <p class="text-gray-600 mt-4">We have established strong partnerships with top universities and educational institutions around the world, ensuring access to a wide range of programs and opportunities.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold text-gray-800">Comprehensive Support</h3>
+                    <p class="text-gray-600 mt-4">From application assistance to visa processing and beyond, we offer a complete suite of services to support every step of your journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-center mb-8">What Our Clients Say</h2>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/3">
+                    <div class="testimonial p-4">
+                        <p class="text-lg text-gray-700">"AimEd provided exceptional support throughout my application process. Their expertise and dedication made studying abroad a seamless experience for me."</p>
+                        <p class="mt-2 text-gray-600">- Anjali R.</p>
+                    </div>
+                </div>
+                <div class="md:w-1/3">
+                    <div class="testimonial p-4">
+                        <p class="text-lg text-gray-700">"The team at AimEd went above and beyond to ensure I had all the information and resources I needed. I’m grateful for their guidance and support."</p>
+                        <p class="mt-2 text-gray-600">- Rajesh K.</p>
+                    </div>
+                </div>
+                <div class="md:w-1/3">
+                    <div class="testimonial p-4">
+                        <p class="text-lg text-gray-700">"From selecting the right university to handling visa applications, AimEd's services were invaluable. I highly recommend them to anyone looking to study abroad."</p>
+                        <p class="mt-2 text-gray-600">- Priya M.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-center mb-8">Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3 class="faq-question text-lg font-semibold text-gray-800">What services does AimEd offer?</h3>
+                <p class="faq-answer text-gray-600 mt-2">AimEd offers a wide range of services including application assistance, visa processing, university selection, scholarship guidance, and more to support students in their study abroad journey.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question text-lg font-semibold text-gray-800">How do I get started with AimEd?</h3>
+                <p class="faq-answer text-gray-600 mt-2">You can get started by contacting us through our website or visiting our office. Our team will guide you through the process and provide personalized assistance based on your needs.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question text-lg font-semibold text-gray-800">What countries do you work with?</h3>
+                <p class="faq-answer text-gray-600 mt-2">We work with universities and institutions in the USA, UK, Australia, New Zealand, Canada, Singapore, France, and Germany, among others.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="p-4 text-center text-white">
+        <div class="footer-links">
+            <div class="footer-links1"> 
+                <h3 class="text-lg font-bold mb-2">Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links2">
+                <h3 class="text-lg font-bold mb-2">About AimEd Abroad Services</h3>
+                <p class="text-sm">Information about the consultancy. Provide details about your services, mission, and vision.</p>
+                <div class="footer-info">
+                    <p>Address: Andhra Pradesh, India</p>
+                    <p>Email: aimedoverseasonline@gmail.com</p>
+                    <p>Phone: +91 7995574698</p>
+                </div>
+            </div>
+            <div class="footer-links1">
+                <h3 class="text-lg font-bold mb-2">Social Links</h3>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/aim.ed_overseas?igsh=bjQ5a2hzNDdkY2d2&utm_source=qr" target="_blank"><i class="bx bxl-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-links3">
+            <h3 class="text-lg font-bold mb-2">About AimEd Abroad Services</h3>
+            <p class="text-sm">Information about the consultancy. Provide details about your services, mission, and vision.</p>
+            <div class="footer-info">
+                <p>Address: 123 Street, City, Country</p>
+                <p>Email: info@example.com</p>
+                <p>Phone: +91 7995574698</p>
+            </div>
+        </div>
+       
+        <div id="copyright">
+            <p>&copy; 2024 Overseas Consultancy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Icon -->
+    <a href="https://wa.me/917995574698" class="whatsapp-icon" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+    <script>
+        function openUl() {
+            const ul = document.getElementById('ul');
+            ul.classList.remove('slide-out');
+            ul.classList.add('slide-in');
+            ul.style.display = 'block';
+            document.getElementById('buttonUl').style.display = 'none';
+            document.getElementById('close').style.display = 'block';
+        }
+        
+        function closeUl() {
+            const ul = document.getElementById('ul');
+            ul.classList.remove('slide-in');
+            ul.classList.add('slide-out');
+            setTimeout(() => {
+                ul.style.display = 'none';
+            }, 200); 
+            document.getElementById('buttonUl').style.display = 'block';
+            document.getElementById('close').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
