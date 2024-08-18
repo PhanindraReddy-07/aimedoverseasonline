@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
 // Correct the connection string, ensuring the password is URL-encoded
-const url = process.env.MONGO_URL;
+
 
 // Connect to MongoDB without deprecated options
-mongoose.connect(url).then(() => {
+mongoose.connect(process.env.MONGO_URL).then(() => {
     console.log('Connected to MongoDB');
 }).catch(err => {
     console.error('Connection error', err);
