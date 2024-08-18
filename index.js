@@ -10,7 +10,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // Connect to MongoDB
-const url = process.env.MONGO_URL;
+const url = process.env.MONGO_URL || "mongodb+srv://phanindrareddy310231:Kpreddy%4007@cluster0.ff85q.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('Connected to MongoDB'))
