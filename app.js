@@ -4,35 +4,65 @@ const bodyParser = require('body-parser');
 const path = require('path');
 require('dotenv').config();
 const mongoose = require('mongoose');
+
+// Initialize Express app
 const app = express();
 const port = process.env.PORT || 3000;
-const { Newsletter, SendMessage, SendEmail } = require('./models');
 
+// Connect to MongoDB
+const url = process.env.MONGO_URL;
+
+mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => console.log('Connected to MongoDB'))
+    .catch(err => console.error('Connection error', err));
+
+// Define Schemas and Models
+const newsletterSchema = new mongoose.Schema({
+    email: { type: String, required: true, unique: true },
+    subscribedAt: { type: Date, default: Date.now }
+});
+
+const sendMessageSchema = new mongoose.Schema({
+    name: { type: String, required: true },
+    email: { type: String, required: true },
+    phone: { type: String, required: true },
+    message: { type: String, required: true },
+    sentAt: { type: Date, default: Date.now }
+});
+
+const sendEmailSchema = new mongoose.Schema({
+    name: { type: String, required: true },
+    email: { type: String, required: true },
+    message: { type: String, required: true },
+    sentAt: { type: Date, default: Date.now }
+});
+
+const Newsletter = mongoose.model('Newsletter', newsletterSchema);
+const SendMessage = mongoose.model('SendMessage', sendMessageSchema);
+const SendEmail = mongoose.model('SendEmail', sendEmailSchema);
 
 // Middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
-// Serve static files (e.g., HTML, CSS, JS)
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Nodemailer transporter setup
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'aimedoverseasonline@gmail.com', 
+        user: 'aimedoverseasonline@gmail.com',
         pass: 'dulu ndno zsce zuzl'
     }
 });
 const transporter2 = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'apply2aimedoverseas@gmail.com', 
+        user: 'apply2aimedoverseas@gmail.com',
         pass: 'lsbl mebl vrkx uszp'
     }
 });
 
-// Route to serve the index.html page
+// Serve static files
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
@@ -66,30 +96,32 @@ app.post('/subscribe', async (req, res) => {
 app.post('/send-message', async (req, res) => {
     const { name, email, phone, message } = req.body;
 
-    try {
-        const newMessage = new SendMessage({ name, email, phone, message });
-        await newMessage.save();
-
-        const mailOptions = {
-            from: 'aimedoverseasonline@gmail.com',
-            to: 'apply2aimedoverseas@gmail.com', 
-            subject: `Contact Form Submission from ${name}`,
-            text: `You have a new message from your website contact form.
+    const mailOptions = {
+        from: 'aimedoverseasonline@gmail.com',
+        to: 'apply2aimedoverseas@gmail.com',
+        subject: `Contact Form Submission from ${name}`,
+        text: `You have a new message from your website contact form.
 Name: ${name}
 Email: ${email}
 Phone: ${phone}
 Message:
 ${message}`
-        };
-        const mailOptions1 = {
-            from: 'apply2aimedoverseas@gmail.com',
-            to: email, 
-            subject: `Contact Form Submission from ${name}`,
-            text: `Thank you for contacting us. We will get back to you shortly.`
-        };
+    };
+    const mailOptions1 = {
+        from: 'apply2aimedoverseas@gmail.com',
+        to: email,
+        subject: `Contact Form Submission from ${name}`,
+        text: `Thank you for contacting us. We will get back to you shortly.`
+    };
 
-        transporter.sendMail(mailOptions);
-        transporter2.sendMail(mailOptions1);
+    try {
+        // Send email first
+        await transporter.sendMail(mailOptions);
+        await transporter2.sendMail(mailOptions1);
+
+        // Save message to database after sending email
+        const newMessage = new SendMessage({ name, email, phone, message });
+        await newMessage.save();
 
         res.status(200).json({ message: 'Message sent successfully! We will get back to you soon.' });
     } catch (error) {
@@ -107,12 +139,12 @@ app.post('/api/send-email', async (req, res) => {
 
         const mailOptions = {
             from: 'aimedoverseasonline@gmail.com',
-            to: email, 
+            to: email,
             subject: 'Thanks for your response',
             text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}.\n We will get back to you shortly.`
         };
 
-        transporter.sendMail(mailOptions);
+        await transporter.sendMail(mailOptions);
         res.send('Message sent successfully!');
     } catch (error) {
         res.status(500).send('Failed to send message or save to database.');
